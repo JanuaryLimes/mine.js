@@ -7,13 +7,12 @@ function App() {
   useEffect(() => {
     if (domElement.current) {
       const engine = new Engine("1", {
-        //@ts-ignore // TODO
         container: { domElement: domElement.current },
       });
       engine.start();
     }
   }, [domElement]);
-  return <div ref={domElement}></div>;
+  return <div style={{ width: 700, height: 500 }} ref={domElement}></div>;
 }
 
 export default App;

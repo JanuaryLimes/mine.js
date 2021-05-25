@@ -19,7 +19,9 @@ import CloudsFragmentShader from "./shaders/clouds/fragment.glsl";
 import CloudsVertexShader from "./shaders/clouds/vertex.glsl";
 import { simpleCull } from "./simple-cull";
 
-import workerSrc from "!raw-loader!./workers/generate-clouds.worker";
+// TODO worker (https://stackoverflow.com/questions/12752622/require-file-as-string?)
+//import workerSrc from "!raw-loader!./workers/generate-clouds.worker";
+const workerSrc = "";
 
 type CloudsOptionsType = {
   seed: number;

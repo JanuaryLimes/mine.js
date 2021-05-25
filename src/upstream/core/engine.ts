@@ -116,7 +116,7 @@ class Engine extends EventEmitter {
 
   public paused = true;
 
-  constructor(worldName: string, params: DeepPartial<ConfigType> = {}) {
+  constructor(worldName: string, params: Partial<ConfigType>) {
     super();
 
     const {
@@ -129,7 +129,7 @@ class Engine extends EventEmitter {
       registry,
       rendering,
       world,
-    } = (this.config = merge(defaultConfig, params));
+    } = (this.config = defaultConfig); //merge(defaultConfig, params));
 
     // debug
     if (debug) {
@@ -140,7 +140,7 @@ class Engine extends EventEmitter {
     //this.network = new Network(this, worldName);
 
     // container
-    this.container = new Container(this, container);
+    this.container = new Container(this, params.container!);
 
     // rendering
     this.rendering = new Rendering(this, rendering);

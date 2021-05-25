@@ -5,7 +5,9 @@ import { Helper } from "../utils";
 
 import { MeshResultType } from "./types";
 
-import workerSrc from "!raw-loader!./workers/simple-cull.worker";
+//TODO
+//import workerSrc from "!raw-loader!./workers/simple-cull.worker";
+const workerSrc = "";
 
 const DEFAULT_WORKER_COUNT = 20;
 const workers: Worker[] = [];
